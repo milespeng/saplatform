@@ -4,10 +4,10 @@ try:
 except:
     pass
 
-if platform.node() == "94_54":
+if platform.node() == "Whaley-PC1":
     from base import *
     from product import *
-elif platform.node() == "JacksMacBookPro.local":
+elif platform.node() == "Whaley-PC1.local":
     from base import *
     from dev import *
 else:

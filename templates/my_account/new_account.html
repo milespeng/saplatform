@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<meta charset="UTF-8">
+<head>
+    <title>new_account</title>
+</head>
+<body>
+
+<h3>新增账号- 请输入新建账号的相关信息</h3>
+<hr/>
+
+
+<form action="{{ request.path }}" method="post">
+    <label for="name">账号名</label><br>
+    <input type="text" name="name" placeholder="账号名"/><br>
+    <label for="password ">密码</label><br>
+    <input type="text" name="password" placeholder="密码"/><br>
+    <label for="host">服务器</label><br>
+    <!--<textarea name="host" placeholder="服务器"></textarea><br>-->
+    <select name="host">
+        <option selected>--请选择--</option>
+        {% for hostname in Hostlist %}
+        <option>{{ hostname }}</option>
+        {% endfor %}
+    </select><br>
+    <label for="priv">权限</label><br>
+    <input type="text" name="priv" placeholder="权限,select or all"/><br>
+    <label for="remoteHost">访问地址</label><br>
+    <input type="text" name="remoteHost" placeholder="访问地址"/><br>
+    <label for="database">访问数据库</label><br>
+    <textarea name="database" placeholder="访问数据库"></textarea><br>
+    <label for="tableName">访问表</label><br>
+    <input type="text" name="tableName" placeholder="访问表"/><br>
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

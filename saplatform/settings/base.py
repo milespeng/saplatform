@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'za5nj^ga!a$+t8rg%9kq8j8)1ig7=s!#g!p&_$x9##8%#u0$--'
+SECRET_KEY = 'za5nj^ga!a$+t8rg%9kq8j8)1ig7=s!#dddag!p&_$x9##8%#u0$--'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'assets',
     'message',
     'database',
+    'my_account',
 )
 
 ANONYMOUS_USER_ID = -1
