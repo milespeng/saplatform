@@ -55,7 +55,7 @@ def new_account(request):
                 messages.error(request, 'cmd run Faild.PLS check it')
 
     # return render(request, 'my_account/new_account.html', context={'Hostlist': hostlist})
-    render_to_response('my_account/new_account.html', hostlist, context_instance=RequestContext(request))
+    render_to_response('my_account/new_account.html', {'Hostlist': hostlist}, context_instance=RequestContext(request))
 
 
 def add_account(account):
