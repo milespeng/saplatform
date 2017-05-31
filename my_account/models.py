@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Create your models here.
 from django.db import models
 from common.common import run_cmd
