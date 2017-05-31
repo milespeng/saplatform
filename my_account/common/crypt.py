@@ -8,6 +8,7 @@ from Crypto.Cipher import AES
 # from crypto.Cipher import AES
 from binascii import b2a_hex, a2b_hex
 import sys
+key = 'djfhj878DFHGFDJ3'
 
 
 class MyCrypto():
