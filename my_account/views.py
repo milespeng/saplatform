@@ -34,8 +34,7 @@ def new_account(request):
     for account in MysqlAccounts.objects.all():
         hostlist.add(account.host)
     if request.method == 'POST':
-        if not request.form['name'] or not request.form['password'] or not request.form['host'] or not request.form[
-            'priv'] \
+        if not request.form['name'] or not request.form['password'] or not request.form['host'] or not request.form[ 'priv'] \
                 or not request.form['remoteHost'] or not request.form['database'] or not request.form['tableName']:
             messages.error(request, 'Please enter all the fields')
         else:
