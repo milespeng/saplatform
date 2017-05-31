@@ -5,6 +5,8 @@ from .models import MysqlAccounts
 from common.crypt import MyCrypto
 from common.common import run_cmd
 from django.contrib import messages
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 
 key = 'djfhj878DFHGFDJ3'
 
@@ -52,7 +54,8 @@ def new_account(request):
             else:
                 messages.error(request, 'cmd run Faild.PLS check it')
 
-    return render(request, 'my_account/new_account.html', context={'Hostlist': hostlist})
+    # return render(request, 'my_account/new_account.html', context={'Hostlist': hostlist})
+    render_to_response('my_account/new_account.html', hostlist, context_instance=RequestContext(request))
 
 
 def add_account(account):
