@@ -5,24 +5,24 @@
 <body>
 
 <h3>
-    <a href="{{ url_for('show_all') }}">数据库权限管理系统</a>
+    <a href={% url 'show_all' %} >数据库权限管理系统</a>
 </h3>
 
 <hr/>
 
-<h3>大数据Mysql访问权限表 (<a href="{{ url_for('new_account') }}">新增账号
-</a>)</h3>
+<h3>大数据Mysql访问权限表 (<a href={% url 'new_account' %}>新增账号
+    </a>)</h3>
 
 <table border="1">
     <thead>
     <tr>
         <th>账号名</th>
         <th>密码</th>
-        <th>服务器 </th>
-        <th>权限 </th>
+        <th>服务器</th>
+        <th>权限</th>
         <th>访问地址</th>
         <th>数据库</th>
-        <th>表名 </th>
+        <th>表名</th>
     </tr>
     </thead>
 
@@ -32,10 +32,10 @@
         <th>{{ MysqlAccount.name }}</th>
         <th>{{ MysqlAccount.password }}</th>
         <th>{{ MysqlAccount.host }}</th>
-        <th>{{ MysqlAccount.priv  }}</th>
-        <th>{{ MysqlAccount.remoteHost  }}</th>
-        <th>{{ MysqlAccount.database  }}</th>
-        <th>{{ MysqlAccount.tableName  }}</th>
+        <th>{{ MysqlAccount.priv }}</th>
+        <th>{{ MysqlAccount.remoteHost }}</th>
+        <th>{{ MysqlAccount.database }}</th>
+        <th>{{ MysqlAccount.tableName }}</th>
     </tr>
     {% endfor %}
     </tbody>
