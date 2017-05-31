@@ -24,4 +24,6 @@ urlpatterns = patterns('',
                        url(r'^del_rollback/(?P<ID>\d+)/$', 'release.views.del_rollback', name='del_rollback'),
                        url(r'^release_record/$', 'release.views.release_record', name='release_record'),
 
+                       url(r'^show_all/$', 'my_account.views.show_all', name='show_all'),
+                       url(r'^new_account/$', 'release.views.new_account', name='new_account'),
                        )
