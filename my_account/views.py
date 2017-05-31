@@ -1,4 +1,3 @@
-
 # Create your views here.
 from django.contrib.auth.decorators import login_required, permission_required
 from django.shortcuts import render, get_object_or_404, redirect
@@ -53,7 +52,7 @@ def new_account(request):
             else:
                 messages.error(request, 'cmd run Faild.PLS check it')
 
-    return render(request, 'new_account.html', Hostlist=hostlist)
+    return render(request, 'my_account/new_account.html', context={'Hostlist': hostlist})
 
 
 def add_account(account):
