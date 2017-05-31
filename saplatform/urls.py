@@ -21,7 +21,8 @@ urlpatterns = patterns('saplatform.views',
                        # message model
                        url(r'^message/', include('message.urls')),
                        # database model
-                       url(r'^database/', include('database.urls')),
+                       url(r'^my_account/', include('my_account.urls')),
+
 
                        )
 
